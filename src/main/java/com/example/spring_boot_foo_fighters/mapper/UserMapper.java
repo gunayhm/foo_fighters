@@ -15,6 +15,9 @@ public interface UserMapper {
     @Mapping(target = "phoneNumber", expression = "java(deletePlus(userDto))")
     UserEntity toUserEntity(UserDto userDto);
 
+    @Mapping(target = "firstName", source = "name")
+    UserDto toUserDto(UserEntity userEntity);
+
     default String deletePlus(UserDto userDto) {
         if (userDto.getPhoneNumber().startsWith("+"))
             return userDto.getPhoneNumber().substring(1);

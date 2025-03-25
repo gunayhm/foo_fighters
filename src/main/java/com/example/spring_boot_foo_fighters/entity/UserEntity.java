@@ -2,6 +2,7 @@ package com.example.spring_boot_foo_fighters.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.type.YesNoConverter;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users", schema = "foo_fighters")
 @Data
+@ToString
 public class UserEntity {
 
     @Id

@@ -18,6 +18,10 @@ spring:
   liquibase:
     change-log: classpath:/liquibase/changelog-master.yml
     enabled: true
+  data:
+    redis:
+      port: 6379
+      host: localhost
 
 server:
   port: 4444
@@ -25,12 +29,5 @@ server:
 api:
   url: http://localhost:9090
 
-security:
-  user:
-    name: user
-    password: password
 
-openweathermap:
-  api:
-    key: f14c808d9ecff8342c55fd048e874f4c
 
